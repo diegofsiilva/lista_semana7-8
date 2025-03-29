@@ -1,20 +1,3 @@
-# Instruções
-
-- Faça uma cópia deste arquivo .md para um repositório próprio
-- Resolva as 6 questões objetivas assinalando a alternativa correta
-- Resolva as 4 questões dissertativas escrevendo no próprio arquivo .md
-  - lembre-se de utilizar as estruturas de código como ``esta aqui com ` `` ou
-```javascript
-//esta aqui com ```
-let a = "olá"
-let b = 10
-print(a)
-```
-- Resolva as questões com uso do Visual Studio Code ou ambiente similar.
-- Teste seus códigos antes de trazer a resposta para cá.
-- Cuidado com ChatGPT e afins: entregar algo só para ganhar nota não faz você aprender e ficar mais inteligente. Não seja dependente da máquina! (E não se envolva em plágio!)
-- ao final, publique seu arquivo lista_02.md com as respostas em seu repositório, e envie o link pela Adalove. 
-
 # Questões objetivas
 
 **1)** Considere o seguinte código JavaScript:
@@ -41,7 +24,7 @@ console.log("O produto dos valores é:", produto);
 ```
 Qual das seguintes alternativas melhor descreve o que o código faz?
 
-### **A) O código avalia a expressão booleana, imprime `true`, calcula o produto dos números na lista e imprime o resultado no console.**
+## **A) O código avalia a expressão booleana, imprime `true`, calcula o produto dos números na lista e imprime o resultado no console.**
 
 B) O código avalia a expressão booleana, imprime `false`, calcula o produto dos números na lista e imprime o resultado no console.
 
@@ -103,7 +86,7 @@ function analisarCredito2() {
 ```
 Se ambas as funções forem executadas com os valores fornecidos, qual será a saída exibida no console?
 
-A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.'
+## A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.'
 
 B) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -600.', enquanto analisarCredito2() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.'
 
@@ -247,7 +230,7 @@ Pedidos de R$200,00 ou mais → "Frete grátis!"
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
 
 ```
-valorDoProduto=DECIMAL
+valorDoProduto=REAL
 valorDoProduto=('Digite o valor do produto: ')
 
 INICIO
@@ -324,6 +307,35 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+
+```
+    VAR
+        velocidadeInicial, velocidadeSegura, desaceleracao, tempoMaximo: REAL
+        tempo, velocidadeAtual: REAL
+    INICIO
+        velocidadeInicial = ESCREVA("Velocidade inicial (m/s): ")
+        velocidadeSegura = ESCREVA("Velocidade segura para pouso (m/s): ")
+        desaceleracao = ESCREVA("Taxa de desaceleração (m/s²): ")
+        tempoMaximo = ESCREVA("Tempo máximo permitido (s): ")
+        
+        
+        tempo = 0
+        velocidadeAtual = velocidadeInicial
+        
+        ENQUANTO velocidadeAtual > velocidadeSegura E tempo <= tempoMaximo FAÇA
+            velocidadeAtual = velocidadeInicial - desaceleracao * tempo
+            tempo = tempo + 1
+        FIMENQUANTO
+        
+        SE velocidadeAtual <= velocidadeSegura ENTAO
+            ESCREVA("Pouso bem-sucedido! Tempo gasto: ", tempo, " segundos")
+        SENAO
+            ESCREVA("Falha no pouso: tempo máximo excedido")
+        FIMSE
+    FIM
+```
+
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
@@ -356,3 +368,26 @@ Escrever("Total de investimentos acumulados:")
 ImprimirMatriz(totalInvestimentos)  
 ```
 Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
+
+
+```
+Função MultiMatrizes(matrizA, matrizB):
+    Se tamanho(matrizA[0]) =! tamanho(matrizB) então:
+        MOSTRE ("As matrizes não podem ser multiplicadas. Dimensões incompatíveis.")
+    Senão:
+        linhasA <- tamanho(matrizA)
+        colunasA <- tamanho(matrizA[0])
+        colunasB <- tamanho(matrizB[0])
+        matrizResultado <- novaMatriz(linhasA, colunasB)
+
+        Para i de 0 até linhasA-1 faça:
+            Para j de 0 até colunasB-1 faça:
+                matrizResultado[i][j] <- 0
+
+        Para i de 0 até linhasA-1 faça:
+            Para j de 0 até colunasB-1 faça:
+                Para k de 0 até colunasA-1 faça:
+                    matrizResultado[i][j] <- matrizResultado[i][j] + (matrizA[i][k] * matrizB[k][j])
+
+        Retornar matrizResultado
+```
