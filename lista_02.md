@@ -246,7 +246,7 @@ Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
 
-´´´
+```
 valorDoProduto=DECIMAL
 valorDoProduto=('Digite o valor do produto: ')
 
@@ -262,7 +262,7 @@ SENAO
   ESCREVA('Frete Grátis!') 
 
 FIM
-´´´
+```
 ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
