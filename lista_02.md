@@ -211,7 +211,7 @@ Escolha a opção que melhor descreve seu propósito:
 
 A) O método update() é responsável por carregar os assets do jogo antes da cena ser exibida.
 
-B) O método update() é chamado continuamente a cada quadro (frame) do jogo, sendo usado para atualizar a lógica, movimentação e interações dos objetos na cena.
+## B) O método update() é chamado continuamente a cada quadro (frame) do jogo, sendo usado para atualizar a lógica, movimentação e interações dos objetos na cena.
 
 C) O método update() renderiza todos os sprites na tela e garante que a física do jogo seja processada corretamente.
 
@@ -222,7 +222,7 @@ ______
 
 Escolha a opção que responde corretamente:
 
-A) Simular física avançada, incluindo corpos rígidos, colisões complexas e interação entre objetos com gravidade e forças.
+## A) Simular física avançada, incluindo corpos rígidos, colisões complexas e interação entre objetos com gravidade e forças.
 
 B) Gerenciar eventos de entrada do usuário, como cliques e toques na tela, permitindo movimentação de personagens.
 
