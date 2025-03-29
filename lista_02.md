@@ -280,6 +280,37 @@ Método CalcularConsumo():
 ```
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
+
+```
+Classe Carro herda Veiculo:
+    Atributos:
+        quilometragem
+        eficiencia // km/l
+    
+    Método Construtor(modelo, ano, quilometragem, eficiencia):
+        super(modelo, ano)
+        this.quilometragem = quilometragem
+        this.eficiencia = eficiencia
+    
+    Método CalcularConsumo():
+        consumo = quilometragem / eficiencia
+        Retornar consumo
+
+
+Classe Moto herda Veiculo:
+    Atributos:
+        quilometragem
+        eficiencia // km/l
+    
+    Método Construtor(modelo, ano, quilometragem, eficiencia):
+        super(modelo, ano)
+        this.quilometragem = quilometragem
+        this.eficiencia = eficiencia
+    
+    Método CalcularConsumo():
+        consumo = quilometragem / eficiencia
+        Retornar consumo
+```
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
